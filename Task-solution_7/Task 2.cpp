@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
-#include <cctype>   // для функции toupper
+#include <cctype>   
 using namespace std;
 
 int mystrcmp(const char* str1, const char* str2); //функция сравнивает две строки и, если строки равны возвращает 0, 
