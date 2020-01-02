@@ -1,13 +1,6 @@
-﻿/*
-	Коняхин Виталий Вячеславович
-
-	Задание 3. Найти среднее арифметическое всех целых чисел от 1 до 1000.
-*/
-
 #include <iostream>
 #include <windows.h>
 using namespace std;
-
 
 int main()
 {
