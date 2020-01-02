@@ -4,8 +4,8 @@
 #include <cctype> 
 using namespace std;
 
-void ReplaceWordStr(string& str, string replacedWord, string wordToReplace); // замена найденого слова в строке
-char* UppercaseLatter(char* str1); // Увелечение первой буквы в заглавную
+void ReplaceWordStr(string& str, string replacedWord, string wordToReplace); // Р·Р°РјРµРЅР° РЅР°Р№РґРµРЅРѕРіРѕ СЃР»РѕРІР° РІ СЃС‚СЂРѕРєРµ
+char* UppercaseLatter(char* str1); // РЈРІРµР»РµС‡РµРЅРёРµ РїРµСЂРІРѕР№ Р±СѓРєРІС‹ РІ Р·Р°РіР»Р°РІРЅСѓСЋ
 int HowManyLettersTheText(char* str, char simbol); //
 int HowManyNumbersText(char* str);
 
@@ -13,32 +13,32 @@ int main()
 {
     setlocale(LC_ALL, "ru");
 
-    // можно организовать ввод слов от пользователя 
+    // РјРѕР¶РЅРѕ РѕСЂРіР°РЅРёР·РѕРІР°С‚СЊ РІРІРѕРґ СЃР»РѕРІ РѕС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ 
     string str = "lorem Ipsum is simply dummy text of the printing 123 and typesetting industry.";
     string replacedWord = "text";
     string wordToReplace = "TEXT_NEW"; 
-    char* ptrStr = new char[str.length() + 1]; // +1 для нулевого байта
+    char* ptrStr = new char[str.length() + 1]; // +1 РґР»СЏ РЅСѓР»РµРІРѕРіРѕ Р±Р°Р№С‚Р°
     strcpy(ptrStr, str.c_str());
 
     cout << endl << endl;
-    cout << "Есть строка: " << str << endl << endl;
-    cout << "Необходимо поменять слово - " << replacedWord << " на слово - " << wordToReplace << endl << endl;
+    cout << "Р•СЃС‚СЊ СЃС‚СЂРѕРєР°: " << str << endl << endl;
+    cout << "РќРµРѕР±С…РѕРґРёРјРѕ РїРѕРјРµРЅСЏС‚СЊ СЃР»РѕРІРѕ - " << replacedWord << " РЅР° СЃР»РѕРІРѕ - " << wordToReplace << endl << endl;
 
     for (int i = 0; i < 50; i++) { cout << "_"; }
     //------------------------------------------------------------------------
     cout << endl << endl;
 
-    ReplaceWordStr(str, replacedWord, wordToReplace); // замена найденого слова в строке
-    cout << "Строка с заменой слова: " << str;
+    ReplaceWordStr(str, replacedWord, wordToReplace); // Р·Р°РјРµРЅР° РЅР°Р№РґРµРЅРѕРіРѕ СЃР»РѕРІР° РІ СЃС‚СЂРѕРєРµ
+    cout << "РЎС‚СЂРѕРєР° СЃ Р·Р°РјРµРЅРѕР№ СЃР»РѕРІР°: " << str;
 
     cout << endl;
     for (int i = 0; i < 50; i++) { cout << "_"; }
     //------------------------------------------------------------------------
     cout << endl << endl;
 
-    string str1 = UppercaseLatter(ptrStr); // Преобразование первой буквы в заглавную
+    string str1 = UppercaseLatter(ptrStr); // РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РїРµСЂРІРѕР№ Р±СѓРєРІС‹ РІ Р·Р°РіР»Р°РІРЅСѓСЋ
 
-    cout << "Строка с увелечением первой буквы: " << str1;
+    cout << "РЎС‚СЂРѕРєР° СЃ СѓРІРµР»РµС‡РµРЅРёРµРј РїРµСЂРІРѕР№ Р±СѓРєРІС‹: " << str1;
 
     cout << endl;
     for (int i = 0; i < 50; i++) { cout << "_"; }
@@ -49,7 +49,7 @@ int main()
 
     int HowManyLetters = HowManyLettersTheText(ptrStr, simbol);
 
-    cout << "Сколько символов - '" << simbol  << "' в строке: " << HowManyLetters;
+    cout << "РЎРєРѕР»СЊРєРѕ СЃРёРјРІРѕР»РѕРІ - '" << simbol  << "' РІ СЃС‚СЂРѕРєРµ: " << HowManyLetters;
 
     cout << endl;
     for (int i = 0; i < 50; i++) { cout << "_"; }
@@ -58,7 +58,7 @@ int main()
 
     int HowManyNumbers = HowManyNumbersText(ptrStr);
 
-    cout << "Сколько цифр в строке: " << HowManyNumbers;
+    cout << "РЎРєРѕР»СЊРєРѕ С†РёС„СЂ РІ СЃС‚СЂРѕРєРµ: " << HowManyNumbers;
 
     cout << endl << endl;
     delete[] ptrStr;
