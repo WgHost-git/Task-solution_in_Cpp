@@ -12,13 +12,13 @@ int main()
 	int size;
 	int count = 0;
 	
-	cout << "Ââåäèòå ðàçìåð ìàññèâà: ";cin >> size;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";cin >> size;
 
 	int* arr = new int[size];
 
 	for (int i = 0; i < size; i++) 
 	{
-		cout << "Ââåäèòå ÷èñëî " << i + 1 << ": "; cin >> arr[i];
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ " << i + 1 << ": "; cin >> arr[i];
 	}
 		
 	cout << endl << endl;
