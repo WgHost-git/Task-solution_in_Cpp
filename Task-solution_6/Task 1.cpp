@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void dynamicArrayOne(int*& arr1, int& size); // Функция распределения динамической памяти одномерного массива
-void initializingOneDimensionalDynamicArray(int*& arr, int& size); // Функция инициализации динамического массива
-void printingOneDimensionalArray(int*& arr, int& size); // Функция печати одномерного динамического массива
-void deletingOneDimensionalArray(int*& arr); // Функция удаления динамического массива
-void addingElementEndOneDimensionalArray(int*& arr, int& size, int element); // Функция добавления элемента в конец массива
-void insertsSpecifiedIndex(int*& arr, int index, int element, int& size); // Функция вставки элемента по указанному индексу 
+void dynamicArrayOne(int*& arr1, int& size); // Р¤СѓРЅРєС†РёСЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ РґРёРЅР°РјРёС‡РµСЃРєРѕР№ РїР°РјСЏС‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°
+void initializingOneDimensionalDynamicArray(int*& arr, int& size); // Р¤СѓРЅРєС†РёСЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
+void printingOneDimensionalArray(int*& arr, int& size); // Р¤СѓРЅРєС†РёСЏ РїРµС‡Р°С‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
+void deletingOneDimensionalArray(int*& arr); // Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
+void addingElementEndOneDimensionalArray(int*& arr, int& size, int element); // Р¤СѓРЅРєС†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
+void insertsSpecifiedIndex(int*& arr, int index, int element, int& size); // Р¤СѓРЅРєС†РёСЏ РІСЃС‚Р°РІРєРё СЌР»РµРјРµРЅС‚Р° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ 
 void deleteSpecifiedIndex(int*& arr, int index, int& size);
 
 int main()
@@ -22,17 +22,17 @@ int main()
 
 	//______________________________________________________________________________________________________
 
-	dynamicArrayOne(arr, size); // Функция распределения динамической памяти одномерного массива
-	initializingOneDimensionalDynamicArray(arr, size); // Функция инициализации динамического массива
-	printingOneDimensionalArray(arr, size); // Функция печати одномерного динамического массива
+	dynamicArrayOne(arr, size); // Р¤СѓРЅРєС†РёСЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ РґРёРЅР°РјРёС‡РµСЃРєРѕР№ РїР°РјСЏС‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°
+	initializingOneDimensionalDynamicArray(arr, size); // Р¤СѓРЅРєС†РёСЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
+	printingOneDimensionalArray(arr, size); // Р¤СѓРЅРєС†РёСЏ РїРµС‡Р°С‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 //______________________________________________________________________________________________________
 
 	cout << endl << endl;
 	cout << "Enter the item to insert: "; cin >> element; cout << endl;
 	cout << "Adding an element to the end of a one-dimensional dynamic array: " << endl << endl;
 
-	addingElementEndOneDimensionalArray(arr, size, element); // Функция добавления элемента в конец массива
-	printingOneDimensionalArray(arr, size); // Функция печати одномерного динамического массива
+	addingElementEndOneDimensionalArray(arr, size, element); // Р¤СѓРЅРєС†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
+	printingOneDimensionalArray(arr, size); // Р¤СѓРЅРєС†РёСЏ РїРµС‡Р°С‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 
 //______________________________________________________________________________________________________
 
@@ -41,8 +41,8 @@ int main()
 	cin >> index; cout << endl;
 	cout << "Enter the item to insert: "; cin >> element;
 
-	insertsSpecifiedIndex(arr, index, element, size); // Функция вставки элемента по указанному индексу
-	printingOneDimensionalArray(arr, size); // Функция печати одномерного динамического массива
+	insertsSpecifiedIndex(arr, index, element, size); // Р¤СѓРЅРєС†РёСЏ РІСЃС‚Р°РІРєРё СЌР»РµРјРµРЅС‚Р° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
+	printingOneDimensionalArray(arr, size); // Р¤СѓРЅРєС†РёСЏ РїРµС‡Р°С‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 
 //______________________________________________________________________________________________________
 
@@ -50,8 +50,8 @@ int main()
 	cout << "Enter the index number you want to delete from 1 to " << size << ": ";
 	cin >> index; cout << endl;
 
-	deleteSpecifiedIndex(arr, index, size); // Функция удаления элемента по указанному индексу
-	printingOneDimensionalArray(arr, size); // Функция печати одномерного динамического массива
+	deleteSpecifiedIndex(arr, index, size); // Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
+	printingOneDimensionalArray(arr, size); // Р¤СѓРЅРєС†РёСЏ РїРµС‡Р°С‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 
 //______________________________________________________________________________________________________
 
@@ -60,13 +60,13 @@ int main()
 	system("pause>null");
 }
 
-// Функция распределения динамической памяти ономерного массива
+// Р¤СѓРЅРєС†РёСЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ РґРёРЅР°РјРёС‡РµСЃРєРѕР№ РїР°РјСЏС‚Рё РѕРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°
 void dynamicArrayOne(int*& arr, int& size)
 {
 	arr = new int[size];
 }
 
-// Функция инициализации динамического массива
+// Р¤СѓРЅРєС†РёСЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 void initializingOneDimensionalDynamicArray(int*& arr, int& size)
 {
 	for (int i = 0; i < size; i++)
@@ -75,7 +75,7 @@ void initializingOneDimensionalDynamicArray(int*& arr, int& size)
 	}
 }
 
-// Функция печати одномерного динамического массива
+// Р¤СѓРЅРєС†РёСЏ РїРµС‡Р°С‚Рё РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 void printingOneDimensionalArray(int*& arr, int& size)
 {
 	cout << endl;
@@ -88,14 +88,14 @@ void printingOneDimensionalArray(int*& arr, int& size)
 
 }
 
-// Функция удаления динамического массива
+// Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°
 void deletingOneDimensionalArray(int*& arr)
 {
 	//cout << &arr << endl;
 	delete[] arr;
 }
 
-// Функция добавления элемента в конец массива
+// Р¤СѓРЅРєС†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
 void addingElementEndOneDimensionalArray(int*& arr, int& size, int element)
 {
 	int* tempArr = new int[size];
@@ -119,7 +119,7 @@ void addingElementEndOneDimensionalArray(int*& arr, int& size, int element)
 	deletingOneDimensionalArray(tempArr);
 }
 
-// Функция вставки элемента по указанному индексу
+// Р¤СѓРЅРєС†РёСЏ РІСЃС‚Р°РІРєРё СЌР»РµРјРµРЅС‚Р° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 void insertsSpecifiedIndex(int*& arr, int index, int element, int& size)
 {
 	int temp;
@@ -153,7 +153,7 @@ void insertsSpecifiedIndex(int*& arr, int index, int element, int& size)
 	deletingOneDimensionalArray(tempArr);
 }
 
-// Функция удаления элемента по указанному индексу
+// Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РёРЅРґРµРєСЃСѓ
 void deleteSpecifiedIndex(int*& arr, int index, int& size)
 {
 	int temp;
