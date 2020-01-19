@@ -1,4 +1,4 @@
-﻿/*
+/*
     Разработайте программу «Библиотека». Создайте структуру «Книга» (название, автор, 
     издательство, жанр). Создайте массив из 10 книг. Реализуйте для него следующие возможности: 
     - Редактировать книгу 
@@ -15,16 +15,40 @@
 #include <ctime>
 using namespace std;
 
-int const SIZE = 10;
-
 struct Book
 {
+private:
     string id;
     string title;
     string autor;
     string publishing;
     string genre;
     
+    //Book()
+    //{
+    //    cout << "Введите название книги: "; cin >> title; cout << endl;
+    //    cout << "Введите атора книги: "; cin >> autor; cout << endl;
+    //    cout << "Введите издательство книги: "; cin >> publishing; cout << endl;
+    //    cout << "Введите жанр книги: "; cin >> genre; cout << endl;
+    //    id = to_string(ID);  
+    //}
+
+public:
+    static int const SIZE = 10;
+
+    // Заполнение массива для тестов чтоб не вводить каждый раз.
+    void FillingArray(Book arrBooks[])
+    {
+        for (int i = 0; i < Book::SIZE; i++)
+        {
+            arrBooks[i].id = to_string(i + 1);
+            arrBooks[i].title = to_string(rand() % 10);
+            arrBooks[i].autor = to_string(rand() % 10);
+            arrBooks[i].publishing = to_string(rand() % 10);
+            arrBooks[i].genre = to_string(rand() % 10);
+        }
+    }
+
     // вывод в консоль 
     void Print(Book arrBooks)
     {
@@ -102,21 +126,18 @@ struct Book
 
         cout << "Книги с указанным названием:" << endl << endl;
 
+        cout.width(7);
+        cout << "ID |" << " Название\t|" << " Автор\t\t|" << " Издательство\t|" << " Жанр\t\t|" << endl;
+        for (int i = 0; i < 73; i++)
+        {
+            cout << "-";
+        }
+        cout << endl;
+
         for (int i = 0; i < SIZE; i++)
         {
             if (books[i].title == title)
             {
-                if (i > 0 && i < 2)
-                {
-                    cout.width(7);
-                    cout << "ID |" << " Название\t|" << " Автор\t\t|" << " Издательство\t|" << " Жанр\t\t|" << endl;
-                    for (int i = 0; i < 73; i++)
-                    {
-                        cout << "-";
-                    }
-                    cout << endl;
-                }
-
                Print(books[i]);
                flag = false;
             }
@@ -198,7 +219,7 @@ struct Book
 int main()
 {
     setlocale(LC_ALL, "ru");
-    Book arrBooks[SIZE];
+    Book arrBooks[Book :: SIZE];
     Book books;
     srand(time(0));
 
@@ -208,14 +229,7 @@ int main()
     string tempStr;
 
     // Заполнение массива для тестов чтоб не вводить каждый раз.
-    for (int i = 0; i < SIZE; i++)
-    {
-        arrBooks[i].id = to_string(i + 1);
-        arrBooks[i].title = to_string(rand()%10);
-        arrBooks[i].autor = to_string(rand() % 10);
-        arrBooks[i].publishing = to_string(rand() % 10);
-        arrBooks[i].genre = to_string(rand() % 10);
-    }
+    books.FillingArray(arrBooks);
 
     do
     {
