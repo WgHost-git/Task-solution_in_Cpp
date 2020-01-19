@@ -23,16 +23,7 @@ private:
     string autor;
     string publishing;
     string genre;
-    
-    //Book()
-    //{
-    //    cout << "Введите название книги: "; cin >> title; cout << endl;
-    //    cout << "Введите атора книги: "; cin >> autor; cout << endl;
-    //    cout << "Введите издательство книги: "; cin >> publishing; cout << endl;
-    //    cout << "Введите жанр книги: "; cin >> genre; cout << endl;
-    //    id = to_string(ID);  
-    //}
-
+   
 public:
     static int const SIZE = 10;
 
